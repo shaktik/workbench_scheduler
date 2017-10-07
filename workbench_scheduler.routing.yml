@@ -1,0 +1,36 @@
+workbench_scheduler.admin_page:
+  path: /admin/config/workbench/scheduler
+  defaults:
+    _title: 'Workbench Schedules'
+    _controller: '\Drupal\workbench_scheduler\Controller\DefaultController::workbench_scheduler_admin_page'
+  requirements:
+    _permission: 'administer workbench schedules'
+workbench_scheduler.admin_edit_schedule:
+  path: '/admin/config/workbench/scheduler/schedules/{name}/edit'
+  defaults:
+    name: false
+    _title: 'Edit Schedule'
+    _form: \Drupal\workbench_scheduler\Form\WorkbenchSchedulerAdminEditSchedule
+  requirements:
+    _permission: 'administer workbench schedules'
+workbench_scheduler.admin_delete_schedule:
+  path: '/admin/config/workbench/scheduler/schedules/{name}/delete'
+  defaults:
+    _title: 'Delete Schedule'
+    _form: \Drupal\workbench_scheduler\Form\WorkbenchSchedulerAdminDeleteSchedule
+  requirements:
+    _permission: 'administer workbench schedules'
+workbench_scheduler.admin_manage_node_schedules:
+  path: '/node/{node}/manage_schedules'
+  defaults:
+    _title: 'Manage Schedules'
+    _form: \Drupal\workbench_scheduler\Form\WorkbenchSchedulerAdminManageNodeSchedules
+  requirements:
+    _custom_access: '\Drupal\workbench_scheduler\Form\WorkbenchSchedulerAdminManageNodeSchedules::workbench_scheduler_manage_schedules_access_check'
+workbench_scheduler.admin_edit_revision_schedule:
+  path: '/node/{node}/manage_schedules/{vid}/edit'
+  defaults:
+    _title: 'Edit Revision Schedule'
+    _form: \Drupal\workbench_scheduler\Form\WorkbenchSchedulerAdminEditRevisionSchedule
+  requirements:
+    _custom_access: '\Drupal\workbench_scheduler\Form\WorkbenchSchedulerAdminEditRevisionSchedule::workbench_scheduler_manage_schedules_access_check'

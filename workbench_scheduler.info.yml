@@ -1,0 +1,9 @@
+name: 'Workbench Scheduler'
+description: 'Provides ability to schedule state changes'
+package: Workbench
+core: 8.x
+dependencies:
+  - workbench_moderation
+  - date
+  - date_popup
+type: module

@@ -1,0 +1,4 @@
+workbench_scheduler.admin_page:
+  route_name: workbench_scheduler.admin_page
+  title: 'Workbench Schedules'
+  description: 'Manage content workbench schedules.'

@@ -1,0 +1,12 @@
+workbench_scheduler.admin_page:
+  route_name: workbench_scheduler.admin_page
+  title: Schedules
+  weight: -1
+  base_route: workbench_scheduler.admin_page
+workbench_scheduler.admin_edit_schedule:
+  route_name: workbench_scheduler.admin_edit_schedule
+  title: 'Add Schedule'
+  parent_id: workbench_scheduler.admin_page
+workbench_scheduler.admin_manage_node_schedules:
+  route_name: workbench_scheduler.admin_manage_node_schedules
+  title: 'Manage Schedules'
